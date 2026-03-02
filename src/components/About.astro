@@ -1,0 +1,97 @@
+---
+// src/components/About.astro
+---
+<section id="about" class="section" aria-labelledby="about-heading">
+  <div class="container">
+
+    <!-- Section Header -->
+    <h2 class="section-title" id="about-heading">About Valerie</h2>
+    <p class="section-subtitle">Full stack marketing expertise across the entire marketing stack — from strategy and automation to analytics and optimization.</p>
+
+    <!-- Two-column grid: summary + skills -->
+    <div class="about-grid">
+
+      <!-- Left: Professional Summary -->
+      <div class="about-summary fade-in">
+        <h2>Professional Summary</h2>
+        <p>
+          Full stack marketing manager with experience driving revenue across B2B, financial services, fintech, and edtech. Equally fluent in campaign strategy and technical execution — from HubSpot automation and GA4 implementation to ABM programs, SEM management, and Looker Studio reporting. I build scalable marketing systems, eliminate data blind spots, and use real-time performance insights to optimize spend, improve conversion rates, and deliver measurable pipeline growth.
+        </p>
+
+        <blockquote>
+          "I'm a full stack marketer. That means I can build the campaign strategy, set up the automation, QA the tracking, analyze the dashboard, and optimize the spend — without handing off to five different people. From HubSpot workflows and GA4 audits to ABM programs and paid search, I operate across the entire marketing stack because sustainable growth doesn't live in any one lane. I build systems that work end-to-end, then use real-time data to make them work better."
+        </blockquote>
+
+      </div>
+
+      <!-- Right: Core Expertise -->
+      <div class="about-details fade-in">
+        <h3>Core Expertise</h3>
+        <ul class="skills-list" role="list">
+          <li>Technical SEO &amp; Analytics (GA4, Core Web Vitals)</li>
+          <li>Multi-Channel Campaign Execution</li>
+          <li>Web Dev &amp; MarTech (HTML, CSS, HubSpot Marketing Hub, Salesforce Marketing Cloud)</li>
+          <li>Executive Reporting &amp; KPI Dashboard Development</li>
+          <li>Platform Migration &amp; Workflow Automation</li>
+          <li>Content Strategy &amp; Lead Generation, Conversion Rate Optimization</li>
+        </ul>
+
+        <h3 style="margin-top:28px;">Tools &amp; Platforms</h3>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;">
+          {[
+            'Google Analytics 4', 'Google Tag Manager', 'Google Ads', 'Hotjar',
+            'LinkedIn Campaign Manager', 'LinkedIn Sales Navigator', 'Apollo',
+            'HubSpot', 'Salesforce', 'MailerLite', 'Mailchimp',
+            'Notion', 'Asana', 'Airtable', 'monday.com', 'Azure DevOps',
+            'Looker Studio', 'Full Story',
+            'WordPress', 'Semrush', 'Screaming Frog', 'Zapier'
+          ].map(tool => (
+            <span style="
+              background:#fff;
+              border:1px solid var(--color-border);
+              border-radius:100px;
+              padding:5px 12px;
+              font-size:0.82rem;
+              font-weight:600;
+              color:var(--color-primary);
+              transition:var(--transition);
+            "
+            onmouseover="this.style.borderColor='var(--color-accent)'; this.style.color='var(--color-accent)'"
+            onmouseout="this.style.borderColor='var(--color-border)'; this.style.color='var(--color-primary)'"
+            >{tool}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Expertise Cards Row -->
+    <div class="expertise-grid" style="margin-top:60px;" aria-label="Areas of expertise">
+      {[
+        {
+          icon: '📣',
+          title: 'Multi-Channel Campaigns',
+          desc:  '100+ quarterly campaigns across digital, paid media, content & traditional channels',
+        },
+        {
+          icon: '💻',
+          title: 'Web Development & Management',
+          desc:  'HTML, CSS, website development, CMS management & digital experience optimization',
+        },
+        {
+          icon: '📊',
+          title: 'Technical SEO & Analytics',
+          desc:  'GA4, technical audits, schema markup, Core Web Vitals & performance tracking',
+        },
+      ].map(item => (
+        <div class="expertise-card fade-in" role="article">
+          <div class="expertise-card-icon" aria-hidden="true">{item.icon}</div>
+          <h4>{item.title}</h4>
+          <p style="font-size:0.84rem; color:#777; margin-top:8px; margin-bottom:0; line-height:1.5;">
+            {item.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

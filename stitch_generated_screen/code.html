@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Valerie Singleton | Senior Marketing Manager Portfolio</title>
+<meta content="Professional portfolio of Valerie Singleton, Senior Marketing Manager specializing in Enterprise ABM, SEO, and HubSpot migrations." name="description"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2c3e50',
+            accent: '#3498db',
+            altBg: '#f0f4f8',
+            textColor: '#444444',
+            headingColor: '#000000',
+          },
+          fontFamily: {
+            sans: ['Arial', 'Helvetica Neue', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-animations">
+    @keyframes pulse-green {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+    .pulse-available { animation: pulse-green 2s infinite; }
+    
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .nav-scrolled {
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      padding-top: 0.75rem !important;
+      padding-bottom: 0.75rem !important;
+    }
+  </style>
+</head>
+<body class="bg-white text-textColor font-sans antialiased">
+<!-- BEGIN: Sticky Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300 py-6 px-6" id="main-nav">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between">
+<a class="text-2xl font-bold text-primary tracking-tighter" href="#">VS<span class="text-accent">.</span></a>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center space-x-8 font-medium">
+<a class="hover:text-accent transition-colors" href="#about">About</a>
+<a class="hover:text-accent transition-colors" href="#case-studies">Case Studies</a>
+<a class="hover:text-accent transition-colors" href="#contact">Contact</a>
+<a class="bg-primary text-white px-5 py-2 rounded-full text-sm hover:bg-accent transition-all flex items-center gap-2" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Resume
+        </a>
+</div>
+<!-- Mobile Toggle -->
+<button aria-label="Toggle Menu" class="md:hidden text-primary" id="mobile-menu-btn">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- Mobile Drawer -->
+<div class="fixed inset-0 bg-primary z-50 translate-x-full transition-transform duration-300 md:hidden" id="mobile-drawer">
+<div class="flex flex-col h-full p-8">
+<div class="flex justify-end">
+<button class="text-white" id="close-menu-btn">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="flex flex-col items-center justify-center flex-1 space-y-8 text-2xl text-white font-bold">
+<a class="mobile-link" href="#about">About</a>
+<a class="mobile-link" href="#case-studies">Case Studies</a>
+<a class="mobile-link" href="#contact">Contact</a>
+<a class="bg-accent px-8 py-3 rounded-full text-lg" href="#">Resume</a>
+</div>
+</div>
+</div>
+</nav>
+<!-- END: Sticky Navigation -->
+<main>
+<!-- BEGIN: Hero Section -->
+<section class="pt-32 pb-20 md:pt-48 md:pb-32 px-6 bg-gradient-to-br from-primary via-[#34495e] to-primary text-white overflow-hidden" id="hero">
+<div class="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div class="fade-in-section" data-purpose="hero-content">
+<span class="inline-block px-4 py-1.5 rounded-full bg-accent/20 border border-accent/30 text-accent font-semibold text-sm mb-6 uppercase tracking-wider">
+            Senior Marketing Manager
+          </span>
+<h1 class="text-[clamp(2.2rem,5vw,3.5rem)] leading-tight font-extrabold mb-6">
+            Valerie Singleton
+          </h1>
+<p class="text-xl text-gray-300 mb-8 max-w-xl">
+            Driving revenue growth through data-backed strategies, enterprise ABM execution, and cross-functional leadership for high-growth tech brands.
+          </p>
+<div class="flex flex-wrap gap-4 mb-10">
+<a class="px-8 py-4 bg-accent hover:bg-white hover:text-primary transition-all font-bold rounded-lg shadow-lg" href="#case-studies">View Case Studies</a>
+<a class="px-8 py-4 bg-transparent border-2 border-white/30 hover:bg-white/10 transition-all font-bold rounded-lg" href="#contact">Get In Touch</a>
+</div>
+<div class="flex items-center gap-6 text-sm text-gray-400">
+<span class="flex items-center gap-2">
+<svg class="w-5 h-5 text-accent" fill="currentColor" viewbox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+              hello@valerie-marketing.com
+            </span>
+</div>
+</div>
+<div class="relative flex justify-center fade-in-section" data-purpose="hero-visuals" style="transition-delay: 200ms;">
+<div class="relative">
+<div class="w-56 h-56 md:w-[320px] md:h-[320px] rounded-full overflow-hidden border-8 border-white/10 shadow-2xl">
+<img alt="Valerie Singleton" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfAfpCMdP-TfAKljwlxYtnbYcgRkK43JE53Md9Mul6e9UBjlzNC8PHQXE0FYVJgSw7vEdg_KmpUVjJz3nHmXjZIEWDJSkDCDRPhzC0SPqQuDODo2CDvYWyj_JX8BKaX-TvMxGqYeF-kGOHd_4Ax30K5s3cuPkKVXE5OIA2woAALo1RsfWvNP4by5aZCVRnt5_WQ8xEp2WN5NnER0jWLek3h5UXHfhdkYqfRFP8dIUPPu8fouxmHx4BFyPeo6w_6c8WhF9o3a1qdtZz"/>
+</div>
+<!-- Stat Pills -->
+<div class="absolute -top-4 -right-4 bg-white p-4 rounded-xl shadow-xl text-primary transform rotate-3 hover:rotate-0 transition-transform">
+<span class="block text-2xl font-bold counter" data-target="15">0</span>
+<span class="text-[10px] uppercase font-bold tracking-widest opacity-60 text-textColor">Years Exp.</span>
+</div>
+<div class="absolute bottom-10 -left-12 bg-white p-4 rounded-xl shadow-xl text-primary transform -rotate-6 hover:rotate-0 transition-transform">
+<span class="block text-2xl font-bold counter" data-target="100">0</span>
+<span class="text-[10px] uppercase font-bold tracking-widest opacity-60 text-textColor">Campaigns</span>
+</div>
+<div class="absolute -bottom-6 right-8 bg-white p-4 rounded-xl shadow-xl text-primary transform rotate-2 hover:rotate-0 transition-transform">
+<span class="block text-2xl font-bold counter" data-target="11">0</span>
+<span class="text-[10px] uppercase font-bold tracking-widest opacity-60 text-textColor">Global Clients</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: About Section -->
+<section class="py-20 px-6 max-w-[1200px] mx-auto overflow-hidden" id="about">
+<div class="text-center mb-16 fade-in-section">
+<h2 class="text-4xl font-bold text-headingColor mb-4">About Valerie</h2>
+<div class="h-1.5 w-20 bg-accent mx-auto rounded-full"></div>
+</div>
+<div class="grid lg:grid-cols-12 gap-12">
+<div class="lg:col-span-7 space-y-8 fade-in-section">
+<p class="text-lg leading-relaxed">
+            With over 15 years in the trenches of digital marketing, I bridge the gap between complex data and creative storytelling. I've led multi-million dollar campaigns for Fortune 500 companies and agile startups alike, consistently delivering ROAS that exceeds industry standards.
+          </p>
+<blockquote class="border-l-4 border-accent pl-6 py-2 italic text-xl text-primary bg-altBg/50 rounded-r-lg">
+            "Marketing isn't just about traffic; it's about building meaningful pathways that convert strangers into lifelong advocates."
+          </blockquote>
+<div class="grid grid-cols-3 gap-4">
+<div class="bg-altBg p-4 rounded-lg text-center">
+<span class="block text-xl font-bold text-accent">45%</span>
+<span class="text-xs uppercase font-bold opacity-60">Avg. Lift</span>
+</div>
+<div class="bg-altBg p-4 rounded-lg text-center">
+<span class="block text-xl font-bold text-accent">$12M+</span>
+<span class="text-xs uppercase font-bold opacity-60">Managed</span>
+</div>
+<div class="bg-altBg p-4 rounded-lg text-center">
+<span class="block text-xl font-bold text-accent">3x</span>
+<span class="text-xs uppercase font-bold opacity-60">Lead Flow</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-8 fade-in-section">
+<div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+<h3 class="font-bold text-xl mb-6 flex items-center gap-2">
+<svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              Core Expertise
+            </h3>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> Growth Marketing Strategy</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> Account-Based Marketing (ABM)</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> Full-Funnel Content Ops</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> Performance SEO &amp; SEM</li>
+</ul>
+<h3 class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-4">Tech Stack</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-gray-100 rounded text-sm font-medium">HubSpot</span>
+<span class="px-3 py-1 bg-gray-100 rounded text-sm font-medium">Salesforce</span>
+<span class="px-3 py-1 bg-gray-100 rounded text-sm font-medium">GA4</span>
+<span class="px-3 py-1 bg-gray-100 rounded text-sm font-medium">SEMrush</span>
+<span class="px-3 py-1 bg-gray-100 rounded text-sm font-medium">Marketo</span>
+<span class="px-3 py-1 bg-gray-100 rounded text-sm font-medium">Tableau</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6 mt-20 fade-in-section">
+<!-- Expertise Card 01 -->
+<div class="p-6 bg-white border border-gray-100 rounded-xl hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-altBg rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-white transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="font-bold mb-2">Demand Gen</h4>
+<p class="text-sm opacity-80">Building scalable lead engines that convert.</p>
+</div>
+<!-- Expertise Card 02 -->
+<div class="p-6 bg-white border border-gray-100 rounded-xl hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-altBg rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-white transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="font-bold mb-2">Data Analytics</h4>
+<p class="text-sm opacity-80">Extracting insights from complex datasets.</p>
+</div>
+<!-- Expertise Card 03 -->
+<div class="p-6 bg-white border border-gray-100 rounded-xl hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-altBg rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-white transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="font-bold mb-2">Team Leadership</h4>
+<p class="text-sm opacity-80">Managing cross-functional creative teams.</p>
+</div>
+<!-- Expertise Card 04 -->
+<div class="p-6 bg-white border border-gray-100 rounded-xl hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-altBg rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-white transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="font-bold mb-2">Market Research</h4>
+<p class="text-sm opacity-80">Deep dives into competitor landscapes.</p>
+</div>
+<!-- Expertise Card 05 -->
+<div class="p-6 bg-white border border-gray-100 rounded-xl hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-altBg rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-white transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="font-bold mb-2">CRM Migrations</h4>
+<p class="text-sm opacity-80">Complex data architecture &amp; cleaning.</p>
+</div>
+</div>
+</section>
+<!-- END: About Section -->
+<!-- BEGIN: Case Studies Section -->
+<section class="py-20 px-6 bg-altBg" id="case-studies">
+<div class="max-w-[1200px] mx-auto">
+<div class="text-center mb-16 fade-in-section">
+<h2 class="text-4xl font-bold text-headingColor mb-4">Strategic Case Studies</h2>
+<p class="max-w-2xl mx-auto text-lg opacity-70">Deep dives into campaign performance and technical execution.</p>
+</div>
+<div class="space-y-16">
+<!-- Case Study 01 -->
+<article class="bg-white rounded-2xl overflow-hidden shadow-sm grid lg:grid-cols-12 fade-in-section">
+<div class="lg:col-span-7 p-8 md:p-12">
+<div class="flex flex-wrap items-center gap-4 mb-6">
+<span class="text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded">Tech Migration</span>
+<span class="text-xs font-bold uppercase tracking-widest text-gray-500">Role: Project Lead</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">01. HubSpot Migration &amp; CRM Overhaul</h3>
+<p class="text-lg mb-8 opacity-80">Consolidating 4 disconnected legacy systems into a unified HubSpot Enterprise environment for a global SaaS client.</p>
+<div class="grid md:grid-cols-2 gap-8 mb-8">
+<div>
+<h4 class="font-bold text-sm uppercase mb-3 text-primary">The Challenge</h4>
+<p class="text-sm leading-relaxed">Fragmented data across regional offices led to 30% lead leakage and inconsistent reporting.</p>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase mb-3 text-primary">The Result</h4>
+<div class="bg-green-50 border border-green-100 p-4 rounded-lg">
+<span class="text-2xl font-bold text-green-700">+220%</span>
+<p class="text-xs text-green-600 font-bold">In Lead Attribution Clarity</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-sm uppercase text-primary">Strategy &amp; Execution</h4>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm list-disc pl-4">
+<li>Data mapping &amp; cleansing for 500k+ records</li>
+<li>Lifecycle stage automation rebuild</li>
+<li>Sales-Marketing feedback loop setup</li>
+<li>Global user training program (150+ staff)</li>
+</ul>
+</div>
+</div>
+<div class="lg:col-span-5 bg-gray-100 p-8 flex flex-col gap-4">
+<img alt="CRM Dashboard" class="rounded-lg shadow-md w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYrx3vJQsQlj2tQhsH2GiI2vBMaSll8lVxI1GZLSXiACc8QVe66omZ0liEIB7yV6q9ZeGXms0BQUcvJZLl_xyqAtvOrnxo05MplvbuN7ny0pjYSGbLAcme-RfmEA1OrSJjKmww44PuCqXkeGqBGq-Ha7REsGzecW9Q8ilNfrqrwf4fpE9Eb6Vd4GEEW4Tny7vKShUCbV6Zo2TCUx7bIENTl8pKlvHJKvARwMgtgjf3XnZCKHXrlEVsG5-krOHtRAf4S2LMUohc4mv_"/>
+<img alt="Workflow Logic" class="rounded-lg shadow-md w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASyUCjIso-M5aq7szVe1JXxSbOaaR5QKY8S25dwUM0JXOzZAcOlshMQjUYwTEqwkrD0-uSAVjPKMgay5dFR2cjbrguu_s-_A2fG3f66WkuwsA6YcYWVVK9JaALaHJhGdJbNw0HCcKGRVyON7rRSV834nXQ6GgukZSC0V2HGqQpjYvR9zuGKozZtTgKPEX3JDtUlVKFnGKGSWP6c44RNInWpaldmD4XCcu8CcOs69hmpKPka037Z3g7dhnP9T5XdD3v47TvYYT1YTJP"/>
+</div>
+</article>
+<!-- Case Study 02 -->
+<article class="bg-white rounded-2xl overflow-hidden shadow-sm grid lg:grid-cols-12 fade-in-section">
+<div class="lg:col-span-7 p-8 md:p-12">
+<div class="flex flex-wrap items-center gap-4 mb-6">
+<span class="text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded">Enterprise ABM</span>
+<span class="text-xs font-bold uppercase tracking-widest text-gray-500">Role: Strategy Director</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">02. Tier-1 Account Expansion Strategy</h3>
+<p class="text-lg mb-8 opacity-80">Implementing a 1-to-1 ABM program targeting 15 high-value accounts in the FinTech sector.</p>
+<div class="grid md:grid-cols-2 gap-8 mb-8">
+<div>
+<h4 class="font-bold text-sm uppercase mb-3 text-primary">The Strategy</h4>
+<p class="text-sm leading-relaxed">Hyper-personalized content experiences coupled with targeted LinkedIn ad sequences and direct mail.</p>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase mb-3 text-primary">The Result</h4>
+<div class="bg-green-50 border border-green-100 p-4 rounded-lg">
+<span class="text-2xl font-bold text-green-700">$4.2M</span>
+<p class="text-xs text-green-600 font-bold">New Pipeline in 6 Months</p>
+</div>
+</div>
+</div>
+<p class="text-sm opacity-80 italic">Execution involved coordinating with sales reps to align outreach with digital intent signals from 6sense.</p>
+</div>
+<div class="lg:col-span-5 bg-gray-100 p-8 flex flex-col gap-4">
+<img alt="ABM Funnel" class="rounded-lg shadow-md w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTPK8RGQK_o_Q932T6Ah7YLTonQB7-9L3UX7ilguj7OPCWQgP5d6fH_ni6iJTP4-x_c-LHMJxUfVMceSXQtHRPZ8j2w9Uuhz4TJOhsqvxe2Ot0pgw9uulEdzD6rupojDSKXRz7Uhf2YeU47EkjB7fecpsH5HdHEw8kYZfZjupFTzcN6zgG6DNPR1p6a_vPkJuduURA9tA4J9RvKGUeOxf7yd9LBXulmafW3IOyy4OafjIXSxtwDmdRg0nAyLJ0qcYbYYpmhV-L2-gV"/>
+<img alt="Personalization" class="rounded-lg shadow-md w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrF6k1gx7zimL2bEDYVNtbau5zvfXHqrUQOqCanbq3wo8soVg8eJvRrMAbH0J-VB-duwWmGx-TELS2QQFApUz58BplqvSw88Ic8E8aFOkUjv2-xlkgBV35YSpaKei_8OUpymaJrmAWHjaUBwWQI8B67ptRbAPDONX8yA0nqPbQenAmfJRZabvKOEyZOw1ZBMShMQo17bV9XIyr7_zDxaRJSBQpLXbJTHDmYiS1mJ_lmXzXzuAlv-4Xtv34AzuTMqPaqhdeNKU_6BMr"/>
+</div>
+</article>
+<!-- Case Study 03 -->
+<article class="bg-white rounded-2xl overflow-hidden shadow-sm grid lg:grid-cols-12 fade-in-section">
+<div class="lg:col-span-7 p-8 md:p-12">
+<div class="flex flex-wrap items-center gap-4 mb-6">
+<span class="text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded">Organic Growth</span>
+<span class="text-xs font-bold uppercase tracking-widest text-gray-500">Role: SEO Specialist</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">03. Technical SEO &amp; Content Pillar Pivot</h3>
+<p class="text-lg mb-8 opacity-80">Recovering a 40% traffic drop by restructuring site architecture and launching a content hub strategy.</p>
+<div class="grid md:grid-cols-2 gap-8 mb-8">
+<div>
+<h4 class="font-bold text-sm uppercase mb-3 text-primary">The Problem</h4>
+<p class="text-sm leading-relaxed">Keyword cannibalization and poor mobile core web vitals were hurting rankings across high-intent terms.</p>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase mb-3 text-primary">The Result</h4>
+<div class="bg-green-50 border border-green-100 p-4 rounded-lg">
+<span class="text-2xl font-bold text-green-700">85%</span>
+<p class="text-xs text-green-600 font-bold">Increase in Organic Traffic</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 bg-gray-100 p-8 flex flex-col gap-4">
+<img alt="SEO Stats" class="rounded-lg shadow-md w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSzUX_jQ7IdI5VEZmRWG_SIgNdGueSW5WnMDNqjRKXzOhDmYCP-eR3MnhX_UnL-JPK56tH4HfvJLvSxSbPhcXqCC2iDuichhi_uLBsjbRLtBNroeGp7YkP6d0DTz6aS4VbUbGRRKIsfncQ0K9d25of6exAflLP5Y11H5Z21qRJlT-MfLe78VuaT1mZQ5HunegZQxHwu88ezWC_t4rU0WJ5_HfakfVYzNo7MqEU3LS7-F18PfEaJMXHOuS0E-hoYqgVFQ68VcNMVDi5"/>
+<img alt="Content Map" class="rounded-lg shadow-md w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDocerAJ1M63ZyJ_bbJb_cz0IdUBHLGv2WsPaxQ5srGvwDJYbOYJ1CGUY-5jxhhb1hc-ypuSYKIKidjGi8ZYnOnRFbUBatxwZs9qw7PiwplGvPwyD2ZuPpYKn7caH1Vxa1eZep0xpy21AXNj8NL9WT1swVoT6zzJ3h6qTNF1H91qLm916ZHoqawZGD6qum8BlGYhIAEpglLLc5nl3SLcd6VOCn5q-BH67M-SUg0arkLKPP3ZX5RGB4KpRHW5QzBoMFv9B2g6yHk5ycD"/>
+</div>
+</article>
+<!-- Case Study 04 -->
+<article class="bg-white rounded-2xl overflow-hidden shadow-sm grid lg:grid-cols-12 fade-in-section">
+<div class="lg:col-span-7 p-8 md:p-12">
+<div class="flex flex-wrap items-center gap-4 mb-6">
+<span class="text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded">Campaign Ops</span>
+<span class="text-xs font-bold uppercase tracking-widest text-gray-500">Role: Ops Manager</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">04. 100+ Multi-Channel Campaigns for Education</h3>
+<p class="text-lg mb-8 opacity-80">Managing high-volume campaign delivery for a higher-ed platform across Paid Social, Display, and Email.</p>
+<div class="grid md:grid-cols-2 gap-8 mb-8">
+<div>
+<h4 class="font-bold text-sm uppercase mb-3 text-primary">The Workflow</h4>
+<p class="text-sm leading-relaxed">Built a custom project management dashboard in Asana that reduced turnaround time by 50%.</p>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase mb-3 text-primary">The Result</h4>
+<div class="bg-green-50 border border-green-100 p-4 rounded-lg">
+<span class="text-2xl font-bold text-green-700">-18%</span>
+<p class="text-xs text-green-600 font-bold">Reduction in CPL</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 bg-gray-100 p-8 flex flex-col gap-4">
+<img alt="Ops Flow" class="rounded-lg shadow-md w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvM9bGmEO27KcMXCRxbcjlRXHcs9DLyyJpug6Iy4QmuZQ4SMGLryc_4IFBgOkKxA8I1QVcB_kZroHQVYiwXDCRcjUWDFQVIr-EKF9aYaRZum1w6AduGebGgWHU3GD-6icBI0lAI-Vz0rW4pHYaX4lJU-7J3EmQlrPbnaI0NhXZc8mPfb-_t4jWU3kC-AjMf9ldoiFlbT7FklLQ_jof9Bae1N3EbA_uF8uS7MIPfbbBH_OHbkro-oq-k9g9qOQI6kNXnEbakeI6GIOB"/>
+<img alt="Creatives" class="rounded-lg shadow-md w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3a38FxUDc4-AqvyCb3knzBpppJJwEUayDYbyFBgwznKi1DrIpe6plGxfihECFIn4hfm30K6JgJRdzUIHk1pf3hGJZrjiFTpsxldiKjkogkdCQhQ0qWLFu116NCD2rmkaStKKfgJaRLP-JNd8LRqmfDFkmtululshNPNwsyYLXmKKXwv5YJ9TDTRlqT-wDUmsDuw-Ih5TENG4YOjQ3s5u8jLC2Ic8qyE0_Q58e2qy7xGE9A6lzj4pWXn66yr9HVGDKZc1Lds5PZDMP"/>
+</div>
+</article>
+<!-- Case Study 05 -->
+<article class="bg-white rounded-2xl overflow-hidden shadow-sm grid lg:grid-cols-12 fade-in-section">
+<div class="lg:col-span-7 p-8 md:p-12">
+<div class="flex flex-wrap items-center gap-4 mb-6">
+<span class="text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded">Executive Reporting</span>
+<span class="text-xs font-bold uppercase tracking-widest text-gray-500">Role: Sr. Analyst</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">05. Executive KPI Dashboard Deployment</h3>
+<p class="text-lg mb-8 opacity-80">Designing a real-time ROI dashboard for C-suite visibility into cross-channel marketing impact.</p>
+<div class="grid md:grid-cols-2 gap-8 mb-8">
+<div>
+<h4 class="font-bold text-sm uppercase mb-3 text-primary">The Solution</h4>
+<p class="text-sm leading-relaxed">Integrated Salesforce, GA4, and Ad networks into a single Tableau source of truth.</p>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase mb-3 text-primary">The Result</h4>
+<div class="bg-green-50 border border-green-100 p-4 rounded-lg">
+<span class="text-2xl font-bold text-green-700">Weekly</span>
+<p class="text-xs text-green-600 font-bold">Alignment Meetings Shortened by 1hr</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 bg-gray-100 p-8 flex flex-col gap-4">
+<img alt="Tableau" class="rounded-lg shadow-md w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG1x3wppjwNdBmEIq2JsWYeBfSHFtXyonkuzbLL5FBc4rrF8gC2xC2vnLPXOxdXcawNxiNzrmVWR_C0xhJYXHRvmXc9CTxmMiYPpQsHXEOsWKCN96b6Gl0YkeBrx2yw596nkbLjzldnuZ728W7bd7_DG37WwEYzWRy0EwQewopOSL5PFwaYL9UiI9cTKJahcIB1HplXDrK2r8ylY7hlzOTbZeV9dHm8S5kgxtuMhGLRbGIobYexJtgrBCFO-W6wMkLpm72DDdFeDsN"/>
+<img alt="Architecture" class="rounded-lg shadow-md w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmccsMXWer0E69p_wnQHSBuc5i6UAyWjNS0-iTywPN_b4q6Zo0TJXKuzhtpxSYb4uae1mbfnF9V_nkXg9eAgrfSo2xteJ1UEXOvMgv-d2PTzk51kCIKW2BFpoNonzUD2W0fHTqRQ4Me1nuU8j5B_5LF1gCvjShzb4GabZSmlB8A1k0aj2uefwmK_l2YGMMZJuC_3snV7k2w3Z5EnH0BpmDKJgxsZXUgbNlqUR4LMPvaJSCQCtDpTTcTZZA_XX5qRIC9GfoR_gwbRfR"/>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: Case Studies Section -->
+<!-- BEGIN: Contact Section -->
+<section class="py-24 px-6 max-w-[1200px] mx-auto" id="contact">
+<div class="grid lg:grid-cols-2 gap-16">
+<div class="fade-in-section">
+<h2 class="text-4xl font-bold text-headingColor mb-6">Let's Connect</h2>
+<p class="text-lg mb-10 opacity-70">Looking for a seasoned marketing leader to scale your next project? Let's discuss your goals.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<p class="text-sm font-bold opacity-60 uppercase">Email</p>
+<p class="text-lg">hello@valerie-marketing.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</div>
+<div>
+<p class="text-sm font-bold opacity-60 uppercase">LinkedIn</p>
+<p class="text-lg">/in/valeriesingleton</p>
+</div>
+</div>
+</div>
+<div class="mt-12 flex items-center gap-3">
+<div class="w-3 h-3 bg-green-500 rounded-full pulse-available"></div>
+<p class="font-bold text-sm text-green-600">Available for Q3/Q4 2024 Consultancy</p>
+</div>
+</div>
+<div class="fade-in-section" style="transition-delay: 200ms;">
+<div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+<form class="space-y-6" id="contact-form">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold mb-2">Name</label>
+<input class="w-full rounded-lg border-gray-200 focus:border-accent focus:ring-accent" placeholder="Jane Doe" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold mb-2">Email</label>
+<input class="w-full rounded-lg border-gray-200 focus:border-accent focus:ring-accent" placeholder="jane@company.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold mb-2">Subject</label>
+<input class="w-full rounded-lg border-gray-200 focus:border-accent focus:ring-accent" placeholder="Growth Project / Consultation" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold mb-2">Message</label>
+<textarea class="w-full rounded-lg border-gray-200 focus:border-accent focus:ring-accent" placeholder="How can I help your brand?" required="" rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-accent transition-all" id="submit-btn" type="submit">Send Message</button>
+<div class="hidden text-center p-4 rounded-lg font-bold" id="form-feedback"></div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Contact Section -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="bg-primary py-12 px-6 text-white text-center">
+<div class="max-w-[1200px] mx-auto">
+<div class="text-3xl font-bold mb-8">VS<span class="text-accent">.</span></div>
+<div class="flex justify-center gap-8 mb-8 font-medium text-sm text-gray-400">
+<a class="hover:text-white" href="#about">About</a>
+<a class="hover:text-white" href="#case-studies">Case Studies</a>
+<a class="hover:text-white" href="#contact">Contact</a>
+<a class="hover:text-white" href="#">LinkedIn</a>
+</div>
+<p class="text-sm text-gray-500">© 2024 Valerie Singleton. All rights reserved. Managed with HubSpot &amp; Growth Intent.</p>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: JavaScript Logic -->
+<script data-purpose="nav-interactions">
+    const nav = document.getElementById('main-nav');
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // Sticky Scroll Effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile Menu Toggle
+    mobileBtn.addEventListener('click', () => {
+      mobileDrawer.classList.remove('translate-x-full');
+    });
+
+    const closeMenu = () => {
+      mobileDrawer.classList.add('translate-x-full');
+    };
+
+    closeBtn.addEventListener('click', closeMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+  </script>
+<script data-purpose="animations-and-counters">
+    // Intersection Observer for Fades
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+
+    // Number Counters
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = +entry.target.getAttribute('data-target');
+          const duration = 2000;
+          let start = 0;
+          const increment = target / (duration / 16);
+          
+          const update = () => {
+            start += increment;
+            if (start < target) {
+              entry.target.innerText = Math.ceil(start) + (target === 15 || target === 100 || target === 11 ? '+' : '');
+              requestAnimationFrame(update);
+            } else {
+              entry.target.innerText = target + '+';
+            }
+          };
+          update();
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 1 });
+
+    document.querySelectorAll('.counter').forEach(c => counterObserver.observe(c));
+  </script>
+<script data-purpose="contact-form-handler">
+    const form = document.getElementById('contact-form');
+    const feedback = document.getElementById('form-feedback');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Sending...';
+      
+      // Simulating AJAX submission
+      setTimeout(() => {
+        feedback.innerText = "Thanks! Your message has been sent successfully. I'll get back to you within 24 hours.";
+        feedback.classList.remove('hidden');
+        feedback.classList.add('bg-green-100', 'text-green-800');
+        submitBtn.innerText = 'Message Sent';
+        form.reset();
+      }, 1500);
+    });
+  </script>
+<!-- END: JavaScript Logic -->
+</body></html>

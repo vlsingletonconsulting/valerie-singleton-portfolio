@@ -1,0 +1,162 @@
+---
+// src/components/CaseStudy.astro
+// All 5 case studies rendered from a data array for clean maintainability.
+
+const caseStudies = [
+  {
+    number: '01',
+    title: 'Executive Analytics Dashboard',
+    client: 'Financial Services Company',
+    role: 'Analytics Lead',
+    badge: '',
+    slug: 'executive-analytics-dashboard',
+    description: 'Comprehensive analytics dashboard providing real-time visibility across marketing channels, enabling data-driven decisions and executive alignment on performance metrics.',
+    metrics: [
+      { val: '0', suffix: '%', label: 'Downtime' },
+      { val: '100', suffix: '%', label: 'Full Success' },
+      { val: '24/7', suffix: '', label: 'Monitoring' }
+    ],
+    challenge: 'Lack of centralized visibility into marketing performance across multiple channels and platforms.',
+    strategy: 'Build a unified dashboard integrating data from GA4, Google Ads, social platforms, and CRM systems.',
+    execution: [
+      'Implemented GA4 data layer and tracking',
+      'Created automated data pipelines',
+      'Designed executive-friendly visualizations',
+      'Built real-time alerting system'
+    ],
+    results: [
+      '100% data accuracy achieved',
+      'Executive adoption increased by 85%',
+      'Decision-making time reduced by 60%'
+    ],
+    images: [
+      { label: 'Analytics Dashboard', desc: 'Executive dashboard with real-time metrics' },
+      { label: 'Traffic Growth', desc: 'Month-over-month traffic analysis' }
+    ]
+  },
+  {
+    number: '02',
+    title: 'Enterprise ABM Program Launch',
+    client: 'MainStreet Bank',
+    role: 'Strategy & Execution Lead',
+    badge: 'Multi-State Pipeline',
+    slug: 'enterprise-abm-program',
+    description: 'Multi-vertical ABM program launching from pilot to scale across government contracting, community banking expansion, and cannabis fintech ventures.',
+    metrics: [
+      { val: '3',   suffix: '',  label: 'Business Lines' },
+      { val: '2+',  suffix: '',  label: 'States Pipeline' },
+      { val: '✓',   suffix: '',  label: 'Pilot > Scale'  },
+    ],
+    challenge: `The bank needed to move beyond broad marketing to target high-value accounts and new business ventures in competitive, regulated verticals. Leadership required proof-of-concept before committing to a full ABM program buildout.`,
+    strategy: `Designed a "Pilot-to-Scale" approach. Launched with a focused GovCon pilot to validate the model, then adapted proven frameworks for two additional lines: a community banking geographic expansion and Venu—a cannabis payment app in a highly restricted advertising environment.`,
+    execution: [
+      'Phase 1 – GovCon Pilot: Targeted social campaigns, exclusive industry events, and dedicated content hubs generated qualified pipeline for government contracting services',
+      'Phase 2 – Community Bank Expansion: Targeted geographic market 50 miles outside the DC metro with hyper-local engagement tactics',
+      'Phase 2 – Venu Cannabis Payment App: Built brand awareness in a regulated space where traditional digital advertising is blocked; compliant educational content drove social media interest and direct inquiry',
+      'Audience Segmentation: Built target account lists using firmographic, behavioral, and intent data across all three programs',
+      'Measurement Framework: Defined attribution models and pipeline velocity metrics for each business line independently',
+    ],
+    results: [
+      'Proven scalability across 3 distinct business lines (GovCon, Regional Banking, Fintech/Cannabis)',
+      'Strong brand foothold established in competitive cannabis fintech space across multiple states',
+      'Venu campaign directly generated a verified pipeline of medical dispensaries in Michigan & Illinois',
+      'ABM model documented and templated for future business line expansions',
+    ],
+    images: [
+      { label: 'ABM Campaign Visuals',     desc: 'GovCon direct mail campaign creative and overview'           },
+      { label: 'Pipeline Metrics Report',  desc: 'ABM performance dashboard showing pipeline generation across multiple states'    },
+      { label: 'ABM Campaign Results',     desc: 'ABM campaign performance overview and results analysis'      },
+    ],
+  },
+  {
+    number: '02',
+    title:  '100+ Quarterly Campaigns for 11+ Education Clients',
+    client: 'Blackboard',
+    role:   'Marketing & Analytics Lead',
+    badge:  '',
+    slug: 'blackboard-enrollment-campaigns',
+    description: 'Managing 100+ quarterly campaigns for 11+ higher education institutions simultaneously, driving an 18% aggregate enrollment increase through data-driven optimization.',
+    metrics: [
+      { val: '18',  suffix: '%',  label: 'Enrollment Increase' },
+      { val: '100', suffix: '+',  label: 'Campaigns/Quarter'   },
+      { val: '11',  suffix: '+',  label: 'Clients Managed'     },
+    ],
+    challenge: `Managing 11 educational institutions with diverse enrollment goals required systematic performance monitoring and continuous optimization. Each institution needed tailored A/B testing strategies to maximize enrollment conversions while maintaining brand consistency and achieving quarterly targets across varying campaign cycles and audience segments.`,
+    strategy: `Implemented a comprehensive performance review and monitoring framework with systematic A/B testing as the core driver for enrollment optimization. Established continuous monitoring protocols for all campaign metrics, enabling real-time adjustments and data-driven decisions that directly impacted enrollment outcomes. Created standardized testing methodologies that could be scaled across all 11 institutions while maintaining individual customization for unique enrollment goals.`,
+    execution: [
+      'Performance Monitoring System: Built real-time dashboards tracking enrollment metrics, conversion rates, and campaign performance across all 11 institutions simultaneously',
+      'A/B Testing Program: Designed and executed systematic A/B tests on form headlines, calls-to-action, landing page layouts, and messaging strategies to optimize enrollment conversions',
+      'Continuous Review Process: Implemented weekly performance reviews and monthly optimization cycles to identify opportunities and address underperforming campaigns',
+      'Cross-Institutional Insights: Shared successful testing results and optimization strategies across the client base while maintaining brand-specific customization',
+      'Enrollment Goal Alignment: Aligned all testing priorities and performance metrics with specific enrollment targets and institutional objectives',
+    ],
+    results: [
+      '18% aggregate enrollment increase across the client base',
+      '30+ successful A/B tests with measurable conversion improvements',
+      '100% on-time campaign delivery across all 11 institutions',
+      '10% increase in client retention through demonstrated performance',
+      'Standardized optimization framework adopted across all client accounts',
+    ],
+    images: [
+      { label: 'Campaign Performance Dashboard', desc: 'Real-time enrollment metrics and campaign performance' },
+      { label: 'A/B Test Results', desc: 'Conversion optimization testing outcomes and insights' },
+    ],
+  },
+];
+---
+
+<section id="case-studies" class="section section-alt" aria-labelledby="cs-heading">
+  <div class="container">
+
+    <!-- Section Header -->
+    <h2 class="section-title" id="cs-heading">Case Studies</h2>
+    <p class="section-subtitle">
+      Three examples of real marketing challenges solved through strategic thinking,
+      technical execution, and measurable outcomes.
+    </p>
+
+    <div class="case-studies-grid">
+      {caseStudies.map((cs) => (
+        <article class="cs-card fade-in" aria-labelledby={`cs-title-${cs.number}`}>
+
+          <!-- Card Header -->
+          <div class="cs-card-header">
+            <div>
+              <div class="cs-number">Case Study {cs.number}</div>
+              <h3 id={`cs-title-${cs.number}`}>{cs.title}</h3>
+              <div class="cs-meta">
+                {cs.role}
+              </div>
+            </div>
+            <div class="cs-badge" aria-label={`Key metrics: ${cs.badge}`}>
+              {cs.badge}
+            </div>
+          </div>
+
+          <!-- Card Body: Content + Visual -->
+          <div class="cs-card-body">
+
+            <!-- Left: Boilerplate Content -->
+            <div class="cs-content">
+              <!-- Brief Description -->
+              <p class="cs-description">{cs.description}</p>
+
+              <!-- Learn More Link -->
+              <a href={`/projects/${cs.slug}`} class="cs-learn-more">
+                Learn More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m5 12 5 5m0 0 5-5m-5 5V3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+
+
+  

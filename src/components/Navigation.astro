@@ -1,0 +1,63 @@
+---
+// src/components/Navigation.astro
+---
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <!-- Brand / Logo -->
+    <a href="/" class="nav-brand" aria-label="Valerie Singleton – home">
+      VS<span>.</span>
+    </a>
+
+    <!-- Desktop menu -->
+    <ul class="nav-menu" role="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#my-work">My Work</a></li>
+      <li><a href="/#case-studies">Case Studies</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <li>
+        <a
+          href="/V.singleton_Growth_Marketing Manager_3226.pdf"
+          download="Valerie_Singleton_Resume.pdf"
+          class="nav-resume-btn"
+          aria-label="Download Valerie Singleton's resume PDF"
+        >
+          ↓ Resume
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="nav-hamburger"
+      class="nav-hamburger"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="nav-drawer"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div id="nav-drawer" class="nav-drawer" role="dialog" aria-label="Mobile navigation">
+  <ul role="list">
+    <li><a href="/">Home</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#my-work">My Work</a></li>
+    <li><a href="/#case-studies">Case Studies</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li>
+      <a
+        href="/V.singleton_Growth_Marketing Manager_3226.pdf"
+        download="Valerie_Singleton_Resume.pdf"
+        class="drawer-resume"
+      >
+        ↓ Download Resume
+      </a>
+    </li>
+  </ul>
+</div>
