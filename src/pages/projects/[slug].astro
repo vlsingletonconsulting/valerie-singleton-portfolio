@@ -180,10 +180,10 @@ export async function getStaticPaths() {
     },
     {
       slug: 'blackboard-enrollment-campaigns',
-      title: 'Blackboard Enrollment Campaigns',
+      title: 'Enrollment Campaigns',
       category: 'EdTech',
       image: '/images/blackboard_campaigns.png',
-      description: '100+ Campaigns. 11 Clients. 18% More Students Enrolled.',
+      description: '11 Clients. 18% More Students Enrolled.',
       fullDescription: 'Managing 100+ quarterly campaigns for 11+ higher education institutions simultaneously — zero margin for error, every deadline met. Drove an 18% aggregate enrollment increase through data-driven management, 30+ A/B tests, and real-time optimization.',
       technologies: ['EdTech', 'Multi-Client Management', 'CRO', 'A/B Testing', 'SEO & Analytics'],
       client: 'Blackboard',
@@ -199,7 +199,7 @@ export async function getStaticPaths() {
     },
     {
       slug: 'vsingleton-consulting',
-      title: 'VSingleton Consulting',
+      title: 'Performance Marketing',
       category: 'Analytics & Consulting',
       image: '/images/vsingleton_consulting.png',
       description: 'From Data Gaps to Decision Clarity',
@@ -274,8 +274,8 @@ const { project } = Astro.props;
               <div class="hero-gradient"></div>
               <div class="hero-pattern"></div>
               <div class="hero-content">
-                <div class="project-badge">Project</div>
-                <h1 class="hero-title">Performance Marketing & Analytics</h1>
+                <div class="project-badge">Case Study</div>
+                <h1 class="hero-title">{project.title}</h1>
                 <p class="hero-subtitle">{project.description}</p>
                 <div class="hero-meta">
                   <span class="hero-category">{project.category}</span>
@@ -393,14 +393,14 @@ const { project } = Astro.props;
             
             <div class="case-study-content">
               <div class="case-study-block">
-                <h3 class="case-study-label">🔴 Challenge</h3>
+                <h3 class="case-study-label">The Challenge</h3>
                 <p class="case-study-text">
                   Government contractors are high-value, hard to reach through broad marketing. The bank wanted credibility and pipeline within the DC metro GovCon community — a notoriously specific audience that requires earned trust, not ad spend.
                 </p>
               </div>
 
               <div class="case-study-block">
-                <h3 class="case-study-label">🔵 Strategy</h3>
+                <h3 class="case-study-label">Strategy</h3>
                 <p class="case-study-text">
                   Built a pilot ABM program using three reinforcing channels: social to build awareness, in-person events to build relationships, and a content hub to demonstrate expertise. Goal: make the bank feel like the financial institution that understands GovCon businesses.
                 </p>
@@ -597,7 +597,7 @@ const { project } = Astro.props;
             
             <div class="case-study-content">
               <div class="case-study-block">
-                <h3 class="case-study-label">� The Challenge</h3>
+                <h3 class="case-study-label">The Challenge</h3>
                 <p class="case-study-text">
                   Business banking paid search is dominated by national banks with massive budgets. Competing dollar-for-dollar on broad commercial terms was inefficient and expensive — the bank needed a smarter approach to drive qualified business leads within budget.
                 </p>
@@ -631,7 +631,7 @@ const { project } = Astro.props;
               </div>
 
               <div class="case-study-block">
-                <h3 class="case-study-label">�� Project Screenshots</h3>
+                <h3 class="case-study-label">Project Screenshots</h3>
                 <div class="project-screenshots">
                   <div class="screenshot-item">
                     <img src="/images/ppc-strategy.png" alt="PPC Strategy" class="screenshot-img" style="object-position: top;" />
