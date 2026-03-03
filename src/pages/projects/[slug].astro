@@ -6,8 +6,26 @@ import Navigation from '../../components/Navigation.astro';
 export async function getStaticPaths() {
   const projects = [
     {
+      slug: 'salesforce-hubspot-migration',
+      title: 'Salesforce → HubSpot Migration',
+      category: 'MarTech & Automation',
+      image: '/images/Genspark-Meridian-Financial-Salesforce-to-HubSpot-Migration-Report-02-28-2026_12_26_AM.png',
+      description: 'Marketing platform migration from Salesforce Marketing Cloud to HubSpot with zero downtime, eliminating developer dependency and significantly reducing costs.',
+      fullDescription: 'Salesforce Marketing Cloud was prohibitively expensive with high platform fees plus ongoing specialized developer costs. Led complete migration to HubSpot while maintaining Salesforce CRM integration without disrupting live campaigns using an "Audit-Rebuild-Validate" framework.',
+      technologies: ['HubSpot', 'Salesforce', 'Marketing Automation', 'CRM Integration', 'MarTech'],
+      client: 'MainStreet Bank',
+      role: 'Project Lead',
+      duration: '4 months',
+      results: [
+        { metric: 'Downtime', value: 'Zero', description: 'All live campaigns maintained throughout migration' },
+        { metric: 'Migration Success', value: '100%', description: 'Complete platform transition achieved' },
+        { metric: 'Cost Reduction', value: 'Significant', description: 'Eliminated licensing + developer retainer fees' },
+        { metric: 'Team Independence', value: 'Achieved', description: 'Team now builds and launches without dev support' }
+      ]
+    },
+    {
       slug: 'executive-analytics-dashboard',
-      title: 'Executive Analytics Dashboard',
+      title: 'Performance Marketing',
       category: 'Analytics & Reporting',
       image: '/images/Analytics-Dashboard-—-Traffic-Growth-02-28-2026_12_56_AM.png',
       description: 'Comprehensive analytics dashboard providing real-time visibility across marketing channels, enabling data-driven decisions and executive alignment on performance metrics.',
@@ -134,7 +152,7 @@ export async function getStaticPaths() {
       title: 'GovCon ABM Campaign',
       category: 'Account-Based Marketing',
       image: '/images/govcon_abm_campaign.png',
-      description: 'Breaking Into the Government Contracting Market with Precision Account-Based Marketing',
+      description: 'Re-establishing Market Presence After Relationship Shifts using Account Based Marketing',
       fullDescription: 'Broke into the government contracting market with a precision ABM strategy targeting DC-area GovCon business owners across LinkedIn, exclusive in-person events, and a dedicated content hub. The pilot generated qualified pipeline and became the blueprint for a multi-vertical ABM program.',
       technologies: ['Account-Based Marketing', 'Event Marketing', 'Content Hub', 'LinkedIn', 'B2B'],
       client: 'MainStreet Bank',
@@ -217,7 +235,7 @@ export async function getStaticPaths() {
     },
     {
       slug: 'business-banking-sem',
-      title: 'Business Banking SEM & PPC',
+      title: 'SEM & PPC',
       category: 'Paid Search',
       image: '/images/business_banking_sem.png',
       description: 'Competing Smart, Not Loud, in a High-Cost Category',
@@ -395,7 +413,7 @@ const { project } = Astro.props;
               <div class="case-study-block">
                 <h3 class="case-study-label">The Challenge</h3>
                 <p class="case-study-text">
-                  Government contractors are high-value, hard to reach through broad marketing. The bank wanted credibility and pipeline within the DC metro GovCon community — a notoriously specific audience that requires earned trust, not ad spend.
+                  The bank's established relationships with government contractors had shifted due to key banker retirements. Re-establishing credibility and pipeline within the DC metro GovCon community required rebuilding trust with a notoriously specific audience that values long-term relationships over ad spend.
                 </p>
               </div>
 
@@ -647,7 +665,48 @@ const { project } = Astro.props;
         ) : null}
 
         <!-- Case Study Details -->
-        {project.slug === 'executive-analytics-dashboard' ? (
+        {project.slug === 'salesforce-hubspot-migration' ? (
+          <div class="case-study-section">
+            <h2 class="section-title">Project Details</h2>
+            
+            <div class="case-study-content">
+              <div class="case-study-block">
+                <h3 class="case-study-label">The Challenge</h3>
+                <p class="case-study-text">
+                  Salesforce Marketing Cloud was prohibitively expensive — high platform fees plus ongoing specialized developer costs. Needed full migration to HubSpot Marketing Hub while maintaining Salesforce CRM integration without disrupting live campaigns.
+                </p>
+              </div>
+
+              <div class="case-study-block">
+                <h3 class="case-study-label">Strategy</h3>
+                <p class="case-study-text">
+                  "Audit-Rebuild-Validate" framework. Not a lift-and-shift — an opportunity to optimize the entire automation infrastructure and eliminate developer dependency.
+                </p>
+              </div>
+
+              <div class="case-study-block">
+                <h3 class="case-study-label">Execution</h3>
+                <ul class="case-study-list">
+                  <li>Catalogued all SFMC campaigns, assets, and data architecture</li>
+                  <li>Led cross-functional team across IT, Sales, external consultants</li>
+                  <li>Rebuilt all core automations: nurture sequences, lead scoring, alerts</li>
+                  <li>Ran parallel testing environment before cutover; validated all triggers</li>
+                  <li>Created full training documentation; upskilled the marketing team</li>
+                </ul>
+              </div>
+
+              <div class="case-study-block">
+                <h3 class="case-study-label">Results</h3>
+                <ul class="case-study-results">
+                  <li>Zero downtime — all live campaigns maintained throughout migration</li>
+                  <li>Significant cost reduction — eliminated licensing + developer retainer fees</li>
+                  <li>Team now fully independent: builds and launches without dev support</li>
+                  <li>Superior reporting and automation management post-migration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        ) : project.slug === 'executive-analytics-dashboard' ? (
           <div class="case-study-section">
             <h2 class="section-title">Project Details</h2>
             
@@ -690,11 +749,18 @@ const { project } = Astro.props;
               <div class="case-study-block">
                 <h3 class="case-study-label">Project Screenshots</h3>
                 <div class="project-screenshots">
-                  <div class="screenshot-item" style="max-width: 120%; transform: scale(1.1);">
-                    <img src="/images/Analytics-Dashboard-—-Traffic-Growth-02-28-2026_12_56_AM.png" alt="GA4 Analytics Dashboard" class="screenshot-img" style="object-fit: cover; object-position: center;" />
+                  <div class="screenshot-item">
+                    <img src="/images/1_dashboard_exec.png" alt="Executive Analytics Dashboard" class="screenshot-img" style="object-position: bottom;" />
                     <div class="screenshot-caption">
-                      <h4>GA4 Analytics Dashboard</h4>
-                      <p>Executive analytics dashboard showing key performance metrics and conversion tracking</p>
+                      <h4>Executive Analytics Dashboard</h4>
+                      <p>Executive analytics dashboard showing channel performance and key metrics across marketing platforms</p>
+                    </div>
+                  </div>
+                  <div class="screenshot-item">
+                    <img src="/images/Analytics-Dashboard-—-Traffic-Growth-02-28-2026_12_56_AM.png" alt="Traffic Growth Dashboard" class="screenshot-img" style="object-position: top;" />
+                    <div class="screenshot-caption">
+                      <h4>Traffic Growth Dashboard</h4>
+                      <p>Traffic growth analytics dashboard showing month-over-month performance and traffic metrics</p>
                     </div>
                   </div>
                   <div class="screenshot-item">
@@ -936,25 +1002,6 @@ const { project } = Astro.props;
                 </ul>
               </div>
 
-              <div class="case-study-block">
-                <h3 class="case-study-label">Project Screenshots</h3>
-                <div class="project-screenshots">
-                  <div class="screenshot-item">
-                    <img src="/images/1_dashboard_exec.png" alt="Executive Analytics Dashboard" class="screenshot-img" style="object-position: bottom;" />
-                    <div class="screenshot-caption">
-                      <h4>Executive Analytics Dashboard</h4>
-                      <p>Executive analytics dashboard showing channel performance and key metrics across marketing platforms</p>
-                    </div>
-                  </div>
-                  <div class="screenshot-item">
-                    <img src="/images/Analytics-Dashboard-—-Traffic-Growth-02-28-2026_12_56_AM.png" alt="Traffic Growth Dashboard" class="screenshot-img" style="object-position: top;" />
-                    <div class="screenshot-caption">
-                      <h4>Traffic Growth Dashboard</h4>
-                      <p>Traffic growth analytics dashboard showing month-over-month performance and traffic metrics</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         ) : null}
@@ -1951,6 +1998,14 @@ const { project } = Astro.props;
       font-size: 1.1rem;
     }
 
+    .screenshot-caption p {
+      font-size: 1.05rem;
+    }
+
+    .screenshot-item {
+      max-width: 100% !important;
+    }
+
     .project-meta-grid {
       grid-template-columns: 1fr;
       gap: 1.5rem;
@@ -2082,7 +2137,7 @@ const { project } = Astro.props;
   <footer role="contentinfo">
     <div class="footer-inner">
       <div>
-        <div class="footer-brand">Valerie<span>.</span>Singleton</div>
+        <div class="footer-brand">Valerie Singleton</div>
         <div style="font-size:0.82rem; color:rgba(255,255,255,0.4); margin-top:4px;">
           Senior Marketing Manager · Washington, DC
         </div>

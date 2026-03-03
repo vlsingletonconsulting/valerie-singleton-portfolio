@@ -151,7 +151,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      }, { threshold: 0.05 });
       fadeEls.forEach(el => observer.observe(el));
     }
 

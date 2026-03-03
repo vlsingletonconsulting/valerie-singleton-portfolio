@@ -5,7 +5,40 @@
 const caseStudies = [
   {
     number: '01',
-    title: 'Executive Analytics Dashboard',
+    title: 'Salesforce → HubSpot Migration',
+    client: 'MainStreet Bank',
+    role: 'Project Lead',
+    badge: 'Zero Downtime',
+    slug: 'salesforce-hubspot-migration',
+    description: 'Complete marketing automation platform migration from Salesforce Marketing Cloud to HubSpot with zero downtime, eliminating developer dependency and significantly reducing costs.',
+    metrics: [
+      { val: '0', suffix: '', label: 'Downtime' },
+      { val: '100', suffix: '%', label: 'Migration Success' },
+      { val: '↓', suffix: '', label: 'Cost & Dev Dependency' }
+    ],
+    challenge: 'Salesforce Marketing Cloud was prohibitively expensive — high platform fees plus ongoing specialized developer costs. Needed full migration to HubSpot while maintaining Salesforce CRM integration without disrupting live campaigns.',
+    strategy: '"Audit-Rebuild-Validate" framework. Not a lift-and-shift — an opportunity to optimize the entire automation infrastructure and eliminate developer dependency.',
+    execution: [
+      'Catalogued all SFMC campaigns, assets, and data architecture',
+      'Led cross-functional team across IT, Sales, external consultants',
+      'Rebuilt all core automations: nurture sequences, lead scoring, alerts',
+      'Ran parallel testing environment before cutover; validated all triggers',
+      'Created full training documentation; upskilled the marketing team'
+    ],
+    results: [
+      'Zero downtime — all live campaigns maintained throughout migration',
+      'Significant cost reduction — eliminated licensing + developer retainer fees',
+      'Team now fully independent: builds and launches without dev support',
+      'Superior reporting and automation management post-migration'
+    ],
+    images: [
+      { label: 'Migration Framework', desc: 'Audit-Rebuild-Validate migration approach' },
+      { label: 'HubSpot Implementation', desc: 'Rebuilt automation infrastructure in HubSpot' }
+    ]
+  },
+  {
+    number: '02',
+    title: 'Performance Marketing',
     client: 'Financial Services Company',
     role: 'Analytics Lead',
     badge: '',
@@ -35,7 +68,7 @@ const caseStudies = [
     ]
   },
   {
-    number: '02',
+    number: '03',
     title: 'Enterprise ABM Program Launch',
     client: 'MainStreet Bank',
     role: 'Strategy & Execution Lead',
@@ -69,11 +102,11 @@ const caseStudies = [
     ],
   },
   {
-    number: '02',
-    title:  '100+ Quarterly Campaigns for 11+ Education Clients',
+    number: '04',
+    title:  'Multi-Client Enrollment Campaign Management',
     client: 'Blackboard',
     role:   'Marketing & Analytics Lead',
-    badge:  '',
+    badge:  '18% Enrollment Growth',
     slug: 'blackboard-enrollment-campaigns',
     description: 'Managing 100+ quarterly campaigns for 11+ higher education institutions simultaneously, driving an 18% aggregate enrollment increase through data-driven optimization.',
     metrics: [
@@ -102,6 +135,39 @@ const caseStudies = [
       { label: 'A/B Test Results', desc: 'Conversion optimization testing outcomes and insights' },
     ],
   },
+  {
+    number: '05',
+    title: 'Venu — Cannabis Payment App',
+    client: 'MainStreet Bank',
+    role: 'Regulated Market Campaign Lead',
+    badge: 'Fintech Launch',
+    slug: 'venu-cannabis-app',
+    description: 'Marketing a cannabis payment app where traditional digital advertising is blocked. Built brand awareness and generated verified pipeline in Michigan & Illinois through compliant content and strategic social engagement.',
+    metrics: [
+      { val: '2+', suffix: '', label: 'States Pipeline' },
+      { val: '✓', suffix: '', label: 'Compliant Marketing' },
+      { val: '✓', suffix: '', label: 'Brand Awareness' }
+    ],
+    challenge: 'Cannabis-related businesses face severe advertising restrictions across major digital platforms. Traditional paid media channels (Google Ads, Facebook, Instagram) prohibit cannabis advertising, making customer acquisition extremely difficult.',
+    strategy: 'Built a compliant content marketing strategy focused on educational value and industry expertise. Leveraged LinkedIn organic reach and industry-specific channels where cannabis business content is permitted.',
+    execution: [
+      'Created educational content series on cannabis payment processing challenges',
+      'Developed LinkedIn thought leadership targeting dispensary operators and CFOs',
+      'Built partnerships with cannabis industry publications for content distribution',
+      'Designed compliant social media campaigns emphasizing financial services expertise',
+      'Targeted medical dispensaries in Michigan & Illinois with industry-specific messaging'
+    ],
+    results: [
+      'Generated verified pipeline of medical dispensaries in Michigan & Illinois',
+      'Built brand awareness in target expansion markets despite channel restrictions',
+      'Drove measurable engagement from dispensary operators and decision-makers',
+      'Established Venu as credible fintech solution in regulated cannabis space'
+    ],
+    images: [
+      { label: 'Venu App Marketing', desc: 'Cannabis payment app marketing materials and campaign creative' },
+      { label: 'Regulated Content Strategy', desc: 'Compliant marketing approach for restricted advertising environment' }
+    ]
+  },
 ];
 ---
 
@@ -111,7 +177,7 @@ const caseStudies = [
     <!-- Section Header -->
     <h2 class="section-title" id="cs-heading">Case Studies</h2>
     <p class="section-subtitle">
-      Three examples of real marketing challenges solved through strategic thinking,
+      Five examples of real marketing challenges solved through strategic thinking,
       technical execution, and measurable outcomes.
     </p>
 
